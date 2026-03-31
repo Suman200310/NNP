@@ -1,0 +1,322 @@
+.study-container {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+.study-hero {
+  text-align: center;
+  padding: 70px 20px 40px;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-white) 100%);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.study-hero h1 {
+  font-size: 36px;
+  margin: 15px 0;
+  color: var(--text);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #2563eb, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.study-hero p {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ================= BENTO SECTION ================= */
+.bento-section {
+  margin-top: 40px;
+}
+
+.bento-header h2 {
+  font-size: 28px;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.bento-header p {
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+/* ================= GRID ================= */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ================= UNIVERSITY CARD ================= */
+.bento-card {
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover */
+.bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+}
+
+/* Top gradient */
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+/* Colors */
+.bento-card:nth-child(1)::before {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+.bento-card:nth-child(2)::before {
+  background: linear-gradient(to right, #8b5cf6, #7c3aed);
+}
+
+.bento-card:nth-child(3)::before {
+  background: linear-gradient(to right, #10b981, #059669);
+}
+
+.bento-card:nth-child(4)::before {
+  background: linear-gradient(to right, #f59e0b, #d97706);
+}
+
+/* Size */
+.bento-card.large {
+  grid-column: span 2;
+  padding: 35px;
+}
+
+.bento-card.small {
+  grid-column: span 1;
+}
+
+/* Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bento-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gray);
+  border-radius: 14px;
+}
+
+.bento-title-row h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+}
+
+.mini-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.bento-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.explore-link {
+  margin-top: auto;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ================= ENTRANCE SECTION ================= */
+.exam-section {
+  margin-top: 60px;
+}
+
+.exam-flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ================= ENTRANCE CARD ================= */
+.exam-card {
+  padding: 25px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--border);
+  flex: 1;
+  min-width: 250px;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover */
+.exam-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+}
+
+/* Top gradient */
+.exam-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+
+/* Colors */
+.exam-card:nth-child(1)::before {
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+}
+
+.exam-card:nth-child(2)::before {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+}
+
+/* Content */
+.exam-inner {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.exam-icon {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-gray);
+  border-radius: 12px;
+}
+
+.exam-content h4 {
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.exam-status {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ================= CTA ================= */
+.premium-cta {
+  margin: 70px 0;
+  text-align: center;
+  padding: 50px 30px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+  box-shadow: 0 10px 40px rgba(37, 99, 235, 0.25);
+}
+
+.premium-cta h3 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.premium-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 28px;
+  background: white;
+  color: var(--primary);
+  border-radius: 12px;
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background: var(--bg-gray);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bento-card.large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card.large {
+    grid-column: span 1;
+  }
+
+  .exam-flex {
+    flex-direction: column;
+  }
+}

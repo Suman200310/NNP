@@ -1,0 +1,556 @@
+.skill-detail-container {
+  padding: 40px 0 80px;
+}
+
+.skill-detail-layout {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+/* Header */
+.skill-header {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding: 35px;
+  border-radius: 24px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+.skill-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+}
+
+.skill-title-block {
+  flex: 1;
+}
+
+.skill-badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.skill-title-block h1 {
+  font-size: 2.2rem;
+  color: var(--text);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.skill-description {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Detail Sections */
+.detail-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.detail-section h2 {
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-section h2 .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.section-intro {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Achievements */
+.achievements-list {
+  list-style: none;
+  padding: 0;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.achievement-item:last-child {
+  border-bottom: none;
+}
+
+.check-icon {
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 50%;
+}
+
+/* Benefits */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.benefit-item:last-child {
+  border-bottom: none;
+}
+
+.star-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 50%;
+}
+
+/* Roadmap */
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roadmap-step {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.roadmap-step:last-child {
+  padding-bottom: 0;
+}
+
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  z-index: 1;
+}
+
+.step-line {
+  width: 3px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--primary), var(--border));
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.roadmap-step:last-child .step-line {
+  display: none;
+}
+
+.step-text {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+  padding-top: 8px;
+}
+
+/* Institutes */
+.institutes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.institute-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 25px 20px;
+  border-radius: 16px;
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.institute-card:hover {
+  background: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-color: var(--primary);
+}
+
+.institute-icon {
+  font-size: 32px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.institute-name {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.institute-link {
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Resources */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.resource-card:hover {
+  background: white;
+  border-color: var(--primary);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.1);
+  transform: translateY(-2px);
+}
+
+.resource-icon {
+  font-size: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+}
+
+.resource-name {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Sidebar */
+.skill-detail-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  margin-bottom: 20px;
+}
+
+.sidebar-card h3 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-card h3 .icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-light);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.quick-facts .fact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.quick-facts .fact-row:last-child {
+  border-bottom: none;
+}
+
+.fact-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.fact-value {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.fact-value.salary {
+  color: #10b981;
+}
+
+.fact-value.prospect {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.cta-card p {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cta-button {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* Loading & Error States */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 15px;
+  color: var(--text-muted);
+  background: white;
+  padding: 60px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  background: white;
+  padding: 60px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--primary-light);
+  border: 1px solid #bfdbfe;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.badge-purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #7c3aed;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.badge-green {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-amber {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge-red {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.badge-blue {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .skill-detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-detail-sidebar {
+    position: static;
+  }
+
+  .institutes-grid,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill-icon {
+    margin: 0 auto;
+  }
+
+  .skill-title-block h1 {
+    font-size: 1.8rem;
+  }
+
+  .detail-section {
+    padding: 20px;
+  }
+}

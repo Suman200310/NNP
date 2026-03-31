@@ -1,0 +1,123 @@
+export const blogPosts = [
+  {
+    id: 'it-colleges-kathmandu-2026',
+    title: 'Top IT Colleges in Kathmandu (2026 shortlist)',
+    dateLabel: 'March 2026',
+    dateISO: '2026-03-10',
+    category: 'Education',
+    readTime: '6 min read',
+    excerpt:
+      'A practical way to shortlist colleges for BSc CSIT / BIT in Kathmandu. Focus on curriculum fit, lab culture, internship links, and exam routine.',
+    content: [
+      'If you are a Nepali student choosing an IT degree, don’t only compare fees. Compare how the college actually teaches: lab hours, project reviews, attendance rules, and internship support.',
+      '### What to check before you pay admission',
+      '- **Syllabus match**: Does it match your goal (software, data, cybersecurity)?',
+      '- **Lab + project culture**: Weekly labs, code reviews, and real projects matter more than “fancy classrooms”.',
+      '- **Internship pipeline**: Ask where seniors interned (Nepali companies + remote).',
+      '- **Exam routine**: How often internal exams happen and how results are communicated.',
+      '### Smart Nepali-student strategy',
+      'Pick a college that lets you build a portfolio (GitHub + 2–3 projects). With that, you can apply to internships in Nepal and remote roles.',
+    ],
+  },
+  {
+    id: 'remote-internship-nepal-2026',
+    title: 'How Nepali students can land a remote internship (2026)',
+    dateLabel: 'Feb 2026',
+    dateISO: '2026-02-18',
+    category: 'Career',
+    readTime: '8 min read',
+    excerpt:
+      'A Nepal-focused playbook: build proof, not promises. GitHub projects, LinkedIn, cold email templates, and how to avoid internship scams.',
+    content: [
+      'Remote internships are possible from Nepal, but the biggest filter is proof of skills.',
+      '### The 3 assets you need',
+      '- **One strong GitHub repo**: a real project with README + screenshots + deployed link.',
+      '- **A clean CV**: 1 page, project-first.',
+      '- **A simple portfolio**: 2–3 projects + contact.',
+      '### Avoid common scams',
+      'If someone asks for “training fee” before offering real work, be careful. Prefer internships posted on verified company sites or reputable communities.',
+    ],
+  },
+  {
+    id: 'pte-vs-ielts-nepal-2026',
+    title: 'PTE vs IELTS for Nepali students: which fits you?',
+    dateLabel: 'Jan 2026',
+    dateISO: '2026-01-22',
+    category: 'Exams',
+    readTime: '7 min read',
+    excerpt:
+      'A simple comparison for Nepal: test format, speaking comfort, retake strategy, and how to plan your timeline with intakes.',
+    content: [
+      'Both PTE and IELTS can work for Nepali students. The “easier” one depends on your speaking style and your test anxiety.',
+      '### Quick checklist',
+      '- **Choose IELTS** if you prefer human evaluation and a traditional format.',
+      '- **Choose PTE** if you like computer-based scoring and structured speaking prompts.',
+      '### Timeline tip',
+      'Plan your test date so you have time for one retake before admission deadlines.',
+    ],
+  },
+  {
+    id: 'data-science-nepal-2026',
+    title: 'The rise of data and AI jobs in Nepal (2026)',
+    dateLabel: 'Jan 2026',
+    dateISO: '2026-01-08',
+    category: 'Tech',
+    readTime: '6 min read',
+    excerpt:
+      'Why fintech, telecom, and e-commerce in Nepal are hiring analysts. A realistic roadmap: Excel → SQL → Python → dashboards → ML basics.',
+    content: [
+      'Data roles in Nepal are growing because companies now compete on speed: marketing, fraud detection, and product decisions.',
+      '### A realistic roadmap from Nepal',
+      '- **Start**: Excel + Google Sheets + basic stats',
+      '- **Next**: SQL (Postgres/MySQL) + data cleaning',
+      '- **Then**: Python (Pandas) + visualization',
+      '- **Bonus**: ML basics + small projects',
+      '### Portfolio idea',
+      'Build one Nepal-focused project: e.g., “Kathmandu rental price analysis” or “Nepal tourism seasonal trends”.',
+    ],
+  },
+  {
+    id: 'noc-nepal-study-abroad',
+    title: 'NOC (Nepal) explained: what students should prepare',
+    dateLabel: 'March 2026',
+    dateISO: '2026-03-20',
+    category: 'Study Abroad',
+    readTime: '5 min read',
+    excerpt:
+      'A Nepal-focused checklist: documents to keep ready (transcripts, bank letters, IDs) so you don’t panic near intake deadlines.',
+    content: [
+      'Many Nepali students lose time because they start paperwork late. Keep your academic documents and IDs organized early.',
+      '### Keep these ready in a folder',
+      '- Citizenship + passport (and copies)',
+      '- SEE/+2/Bachelor transcripts and certificates',
+      '- Bank documents (as required by your destination)',
+      '- Offer letter / CAS / CoE / I-20 (depending on country)',
+      '### Best practice',
+      'Use a single Google Drive folder with scanned PDFs, named properly (e.g., `+2_transcript.pdf`).',
+    ],
+  },
+  {
+    id: 'nepal-trends-2026-skills',
+    title: 'Nepal career trends (2026): skills that are paying off',
+    dateLabel: 'March 2026',
+    dateISO: '2026-03-26',
+    category: 'Trends',
+    readTime: '6 min read',
+    excerpt:
+      'AI-assisted work, cloud, cybersecurity, digital marketing, and healthcare — what Nepali students should learn now to stay employable.',
+    content: [
+      'Trends change fast, but employability patterns are consistent: companies pay for skills that save time and reduce risk.',
+      '### High-signal skills in Nepal (2026)',
+      '- **AI tools + automation** (use responsibly: learn prompts + verification)',
+      '- **Cloud basics** (deployments, CI/CD, monitoring)',
+      '- **Cybersecurity hygiene** (OWASP, auth, backups)',
+      '- **Performance marketing** (SEO + ads + analytics)',
+      '- **Healthcare pathways** (nursing + allied health)',
+      '### What to do this month',
+      'Pick one skill and build one portfolio project around a Nepal problem.',
+    ],
+  },
+];
+
+export const getBlogPostById = (id) => blogPosts.find((p) => p.id === id) || null;
+

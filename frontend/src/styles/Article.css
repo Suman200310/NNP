@@ -1,0 +1,139 @@
+.full-article {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+}
+
+.article-header {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: var(--primary);
+  border: 1px solid #bfdbfe;
+  background: var(--primary-light);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.article-header h1 {
+  color: var(--text);
+  line-height: 1.25;
+  margin: 20px 0 12px;
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+}
+
+.article-date {
+  color: var(--text-muted);
+  margin: 0;
+  font-size: 14px;
+}
+
+.article-content {
+  margin-top: 25px;
+}
+
+.article-p {
+  color: var(--text-secondary);
+  margin: 16px 0;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.article-h2 {
+  margin: 30px 0 15px;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.article-list {
+  margin: 15px 0 20px;
+  padding-left: 24px;
+  color: var(--text-secondary);
+}
+
+.article-list li {
+  margin: 12px 0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.article-list li::marker {
+  color: var(--primary);
+}
+
+.article-highlight {
+  background: var(--bg-gray);
+  padding: 20px 25px;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+  margin: 25px 0;
+}
+
+.article-highlight p {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.article-tag {
+  padding: 8px 16px;
+  background: var(--bg-gray);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.article-footer {
+  margin-top: 40px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+}
+
+.back-to-blog {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  background: var(--primary-light);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.back-to-blog:hover {
+  background: var(--primary);
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .full-article {
+    padding: 25px 20px;
+    margin: 20px auto;
+  }
+}
