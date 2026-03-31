@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Blog.css';
-import { blogPosts } from '../data/blogPosts';
+
+const API = import.meta.env.VITE_API_URL + '/api';
 
 const Blog = () => {
-  const posts = blogPosts;
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(`${API}/articles`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.success) setPosts(data.data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="blog-container">
+        <div className="container">
+          <header className="blog-header">
+            <h1 className="blog-title">Student <span className="highlight">Blog</span></h1>
+            <p className="blog-subtitle">Loading...</p>
+          </header>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="blog-container">

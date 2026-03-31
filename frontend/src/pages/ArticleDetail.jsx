@@ -1,35 +1,29 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import '../styles/global.css';
 import '../styles/Article.css';
-import { getBlogPostById } from '../data/blogPosts';
+
+const API = import.meta.env.VITE_API_URL + '/api';
 
 const ArticleDetail = () => {
   const { id } = useParams();
   const [article, setArticle] = useState(null);
   const [loading, setLoading] = useState(true);
-  const localPost = useMemo(() => getBlogPostById(id), [id]);
 
   useEffect(() => {
     let alive = true;
     setLoading(true);
 
-    // Try API first (if backend provides it), otherwise fall back to local dataset.
-    axios
-      .get(`/api/articles/${id}`)
-      .then((res) => {
+    fetch(`${API}/articles/${id}`)
+      .then(r => r.json())
+      .then(data => {
         if (!alive) return;
-        setArticle(res.data);
+        if (data.success) setArticle(data.data);
         setLoading(false);
       })
       .catch(() => {
         if (!alive) return;
-        if (localPost) {
-          setArticle(localPost);
-        } else {
-          setArticle(null);
-        }
+        setArticle(null);
         setLoading(false);
       });
 

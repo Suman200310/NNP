@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/careers.css';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL + '/api';
 
 const Careers = () => {
   const [search, setSearch] = useState('');

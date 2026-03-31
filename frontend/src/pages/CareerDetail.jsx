@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import '../styles/career-detail.css';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.VITE_API_URL + '/api';
 
 function CareerDetail() {
   const { id } = useParams();
