@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: nnp-backend
+    runtime: node
+    region: singapore
+    rootDirectory: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: NODE_ENV
+        value: production
+    plan: free
+
+  - type: web
+    name: nnp-frontend
+    runtime: static
+    region: singapore
+    rootDirectory: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: nnp-backend
+          envVarKey: RENDER_EXTERNAL_URL
