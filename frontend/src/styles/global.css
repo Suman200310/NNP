@@ -1,15 +1,15 @@
 /* ===========================
-   NextStep Nepal - Creative Theme
-   Engaging, Modern & Warm
+   NextStep Nepal - Eye-Catching Theme
+   Vibrant, Clean & Modern
    =========================== */
 
 :root {
-  /* Primary - Vibrant Blue */
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
-  --primary-light: #eff6ff;
+  /* Primary - Vibrant Blue-Purple */
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --primary-light: #eef2ff;
 
-  /* Accent - Warm Coral */
+  /* Secondary - Coral Orange */
   --accent: #f97316;
   --accent-light: #fff7ed;
 
@@ -17,24 +17,25 @@
   --success: #10b981;
   --success-light: #ecfdf5;
 
-  /* Backgrounds */
-  --bg: #f8fafc;
+  /* Background - Clean White */
+  --bg: #fafbfc;
   --bg-white: #ffffff;
   --bg-card: #ffffff;
 
   /* Text - High Contrast */
-  --text: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
 
   /* Borders */
-  --border: #e2e8f0;
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
-  --shadow-primary: 0 4px 14px rgba(59, 130, 246, 0.35);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
+  --shadow-primary: 0 4px 14px rgba(79, 70, 229, 0.3);
 
   /* Typography */
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -54,9 +55,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font);
@@ -70,12 +69,10 @@ body {
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
-a:hover {
-  color: var(--primary-dark);
-}
+a:hover { color: var(--primary-dark); }
 
 img { max-width: 100%; display: block; }
 
@@ -124,7 +121,7 @@ p {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
@@ -143,20 +140,21 @@ p {
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: var(--primary);
   color: white;
   box-shadow: var(--shadow-primary);
 }
 
 .btn-primary:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.45);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
   color: white;
 }
 
@@ -201,18 +199,16 @@ input, textarea, select {
   font-family: inherit;
   background: white;
   color: var(--text);
-  transition: all 0.2s;
+  transition: all 0.2s ease;
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-input::placeholder {
-  color: var(--text-muted);
-}
+input::placeholder { color: var(--text-muted); }
 
 /* Responsive */
 @media (max-width: 768px) {
