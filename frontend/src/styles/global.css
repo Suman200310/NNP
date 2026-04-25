@@ -1,41 +1,66 @@
 /* ===========================
-   NextStep Nepal - Eye-Catching Theme
-   Vibrant, Clean & Modern
+   NextStep Nepal - Premium EdTech Theme
+   Himalayan-Inspired, Glassmorphism, Modern
    =========================== */
 
 :root {
-  /* Primary - Vibrant Blue-Purple */
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
-  --primary-light: #eef2ff;
+  /* Nepal-Inspired Colors */
+  --nepal-red: #dc2626;
+  --nepal-red-dark: #b91c1c;
+  --nepal-red-light: #fef2f2;
+  
+  --nepal-blue: #2563eb;
+  --nepal-blue-dark: #1d4ed8;
+  --nepal-blue-light: #dbeafe;
+  
+  --lavender: #a78bfa;
+  --lavender-light: #ede9fe;
+  
+  /* Primary - Nepal Blue */
+  --primary: var(--nepal-blue);
+  --primary-dark: var(--nepal-blue-dark);
+  --primary-light: var(--nepal-blue-light);
 
-  /* Secondary - Coral Orange */
-  --accent: #f97316;
-  --accent-light: #fff7ed;
+  /* Accent - Nepal Red */
+  --accent: var(--nepal-red);
+  --accent-light: var(--nepal-red-light);
 
   /* Success - Fresh Green */
   --success: #10b981;
   --success-light: #ecfdf5;
 
-  /* Background - Clean White */
-  --bg: #fafbfc;
+  /* Premium Backgrounds - Layered */
+  --bg: #f8fafc;
   --bg-white: #ffffff;
   --bg-card: #ffffff;
+  --bg-gradient: linear-gradient(180deg, #ffffff 0%, #f0f9ff 50%, #e0f2fe 100%);
+  --bg-mesh: 
+    radial-gradient(at 40% 20%, rgba(37, 99, 235, 0.06) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(167, 139, 250, 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(220, 38, 38, 0.04) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(37, 99, 235, 0.04) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(167, 139, 250, 0.06) 0px, transparent 50%);
 
   /* Text - High Contrast */
-  --text: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
+  --text: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  /* Glass Effect */
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.6);
 
   /* Borders */
-  --border: #e5e7eb;
-  --border-light: #f3f4f6;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  /* Premium Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.12);
-  --shadow-primary: 0 4px 14px rgba(79, 70, 229, 0.3);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --shadow-primary: 0 4px 14px rgba(220, 38, 38, 0.25);
+  --shadow-blue: 0 4px 14px rgba(37, 99, 235, 0.25);
 
   /* Typography */
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -46,6 +71,12 @@
   --radius: 12px;
   --radius-sm: 8px;
   --radius-lg: 16px;
+  --radius-xl: 20px;
+  
+  /* Transitions */
+  --transition: 0.2s ease;
+  --transition-fast: 0.15s ease;
+  --transition-slow: 0.3s ease;
 }
 
 /* Reset */
@@ -62,7 +93,8 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
-  background: var(--bg);
+  background: var(--bg-mesh), var(--bg);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -115,19 +147,28 @@ p {
   line-height: 1.7;
 }
 
-/* Cards */
+/* Premium Cards - Glassmorphism */
 .card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(37, 99, 235, 0.08);
+  border-color: var(--primary-light);
+}
+
+/* Glass Card */
+.card-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
 }
 
 /* Buttons */
@@ -140,21 +181,32 @@ p {
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
   border: none;
   cursor: pointer;
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--nepal-red), var(--nepal-red-dark));
   color: white;
   box-shadow: var(--shadow-primary);
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.35);
+  color: white;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, var(--nepal-blue), var(--nepal-blue-dark));
+  color: white;
+  box-shadow: var(--shadow-blue);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
   color: white;
 }
 
@@ -165,8 +217,9 @@ p {
 }
 
 .btn-outline:hover {
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--nepal-blue);
+  color: var(--nepal-blue);
+  background: var(--primary-light);
 }
 
 /* Badges */
